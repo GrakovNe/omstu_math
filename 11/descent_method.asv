@@ -1,0 +1,21 @@
+syms x y
+
+f1 = -5*x^2 - x*y + 64;
+f2 = -2*x^2 + 3*y^2 - 16;
+
+x0 = [3; 3];
+
+W = [diff(f1, x) diff(f1, y); diff(f2, x) diff(f2, y)];
+TranspW = transpose(W);
+
+wX = vpa(subs(W, [x y], [x0(1) x0(2)]));
+twX = vpa(subs(TranspW, [x y], [x0(1) x0(2)]));
+fX = [subs(f1, [x y], [x0(1) x0(2)]); subs(f2, [x y], [x0(1) x0(2)])];
+
+x0 = x0 - twX*wX*fX;
+
+
+a = [3 4 5];
+b = [1 2 3];
+
+
