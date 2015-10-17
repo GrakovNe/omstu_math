@@ -10,7 +10,7 @@ W = [diff(f1, x) diff(f1, y) diff(f1, z); diff(f2, x) diff(f2, y) diff(f2, z); d
 TranspW = transpose(W);
 
 oldX0 = [0;0;0];
-E = 0.001;
+E = 0.0001;
 
 while (abs(max(oldX0) - max(x0)) > E)
     oldX0 = x0;
