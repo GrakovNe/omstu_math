@@ -1,6 +1,6 @@
 syms x y
 
-dY = exp(x) * (x + 1) + y / (x+1) ;
+dY = exp(x) * (x + 1) + y / (x+1);
 Y = int(dY);
 
 Res = 0;
